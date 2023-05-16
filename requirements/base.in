@@ -1,0 +1,20 @@
+# Core requirements for using this application
+-c constraints.txt
+
+Django             # Web application framework
+django-bootstrap4-form
+celery
+email-reply-parser
+akismet
+markdown
+beautifulsoup4
+lxml
+simplejson
+pytz
+pinax_teams
+djangorestframework
+django-model-utils
+django-cleanup
+oauthlib
+requests_oauthlib
+
