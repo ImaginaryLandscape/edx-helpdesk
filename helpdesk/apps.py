@@ -22,4 +22,14 @@ class HelpdeskConfig(AppConfig):
                 PluginURLs.RELATIVE_PATH: 'helpdesk.urls',
             },
         },
+        PluginSettings.CONFIG: {
+            'lms.djangoapp': {
+                'production': {
+                    PluginSettings.RELATIVE_PATH: 'settings.production',
+                },
+                'common': {
+                    PluginSettings.RELATIVE_PATH: 'settings.common',
+                },
+            },
+        },
     }

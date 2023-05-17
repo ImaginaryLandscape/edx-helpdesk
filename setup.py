@@ -101,13 +101,18 @@ README = open(os.path.join(os.path.dirname(__file__), 'README.rst'), encoding="u
 CHANGELOG = open(os.path.join(os.path.dirname(__file__), 'CHANGELOG.rst'), encoding="utf8").read()
 
 setup(
-    name='edx-helpdesk',
+    name='helpdesk',
     version=VERSION,
     description="""Edx port of django-helpdesk""",
     long_description=README + '\n\n' + CHANGELOG,
     author='edX',
     author_email='oscm@edx.org',
     url='https://github.com/openedx/edx-helpdesk',
+    entry_points={
+        'lms.djangoapp': [
+            'helpdesk = helpdesk.apps:HelpdeskConfig',
+        ],
+    },
     packages=find_packages(
         include=['helpdesk', 'helpdesk.*'],
         exclude=["*tests"],
